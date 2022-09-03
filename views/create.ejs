@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClipX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body  class="bg-warning bg-opacity-25" >
+    <div style="margin:10% auto; text-align: center;"  >
+        <img src="logo.png" alt="clipboard logo" style="height: 100px; margin: 15px;"/>
+        <h1 class="fw-bolder text-center" style="font-family: 'Lobster', cursive; color:darkblue;">Clip-X</h1>
+        <h5 class="fw-semibold text-center" style="color: darkblue;">an Online Clipboard</h5>
+            <form action="/insert" method="post">
+
+                <div class="card border-warning mb-3 mx-auto " style="max-width: 18rem; margin-top: 3%;">
+                    <div required class="card-header" style="font-weight:bold; font-size:medium; padding: 2%; ">Clip Id
+                    </div>
+                    <div class="card-body text-danger">
+                        <h5 id="id_text"class="card-title">
+                            <%=id%>
+                        </h5>
+                    </div>
+
+                </div>
+                <div>
+                    <p class="font-weight-normal text-danger text-center"
+                    style="font-weight:lighter; font-size:medium; margin-top: 3%;">Enter Your text</p>
+                    <input type="hidden" name="id" id="hidden" value="<%=id%>">
+                    
+
+                    <textarea class="form-control mx-auto border border-danger " name="data" rows="11"
+                        style="width: 30%;"></textarea>
+                </div>
+
+                <div style="margin:2% ;" class="d-flex justify-content-around">
+                    <button type="submit" class="btn btn-outline-danger">Create Clip</button>
+                </div>
+            </form>
+
+            <footer><div class="alert alert-warning border border-warning mx-auto " role="alert" style="width:fit-content; margin-top: 5%;">
+                <p class="font-weight-normal text-danger text-center"
+                style="font-weight:lighter; font-size:medium;">We store your data only for 28 days. After than it will be automatically deleted.</p>
+              </div></footer>
+    
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+                crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
