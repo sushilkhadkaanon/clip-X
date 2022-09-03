@@ -6,6 +6,6 @@ const clipSchema = new Schema({
   data:   String,
   createdAt: { type: Date, default: Date.now },
 });
-clipSchema.index({ "createdAt": 1 }, { expireAfterSeconds: 30 } )
+clipSchema.index({ "createdAt": 1 }, { expireAfterSeconds: 86400 } )
 const Clip = mongoose.model('clip',clipSchema);
 module.exports = Clip;
