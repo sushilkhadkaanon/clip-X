@@ -4,7 +4,7 @@ const { send } = require("process");
 
 const Clip = require('.././models/clip');
 
-
+Clip.createIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 30 } )
 
 module.exports = function (app) {
 

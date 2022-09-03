@@ -13,6 +13,7 @@ require('./routes/routes')(app);
 require('dotenv').config()
 
 const mongoose = require('mongoose');
+const Clip = require('./models/clip');
     
     mongoose.connect(process.env.MONGO_SERVER, {
         useNewUrlParser: true,
